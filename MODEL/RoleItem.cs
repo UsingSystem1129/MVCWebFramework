@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MODEL
 {
     /// <summary>
     /// 模块拥有的功能实体表
     /// </summary>
-  public class RoleItem
+    public class RoleItem
     {
-        int rItemID;
-
-        public int RItemID
+        
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int RoleItemID
         {
-            get { return rItemID; }
-            set { rItemID = value; }
+            get;set;
         }
         int iTemID;
 
@@ -31,8 +33,9 @@ namespace MODEL
             get { return roleID; }
             set { roleID = value; }
         }
+        
         string menuNo;
-
+        [StringLength(200), MaxLength(200)]
         public string MenuNo
         {
             get { return menuNo; }

@@ -14,8 +14,10 @@ namespace WEB.Controllers
         // GET: Login
         public ActionResult Index()
         {
-            UserInfo user = new UserInfo() { LoginName = "admin", RealName = "ceshi" };
-             userinfoRespository.Insert(user); 
+            FrameworkDBContext context = new FrameworkDBContext();
+            context.Database.CreateIfNotExists();
+            //UserInfo user = new UserInfo() { LoginName = "admin", RealName = "ceshi" };
+            // userinfoRespository.Insert(user); 
             return View();
         }
     }

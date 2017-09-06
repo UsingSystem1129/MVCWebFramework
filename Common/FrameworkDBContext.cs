@@ -24,6 +24,10 @@ namespace COMMON
 
 
         public DbSet<UserInfo> UserInfos { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<UserPower> UserPowers { get; set; }
+        public DbSet<RoleItem> RoleItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

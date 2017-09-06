@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MODEL
 {
     public class UserPower 
     {
-		int userPowerID;
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        int userPowerID;
 		public int UserPowerID
 		{
 			get { return userPowerID; }
@@ -17,7 +23,8 @@ namespace MODEL
 			get { return powerMaster; }
 			set { powerMaster = value; }
 		}
-		string powerMasterValue;
+        [StringLength(200)]
+        string powerMasterValue;
 		public string PowerMasterValue
 		{
 			get { return powerMasterValue; }
@@ -29,7 +36,8 @@ namespace MODEL
 			get { return powerAccess; }
 			set { powerAccess = value; }
 		}
-		string powerAccessValue;
+        [StringLength(200)]
+        string powerAccessValue;
 		public string PowerAccessValue
 		{
 			get { return powerAccessValue; }

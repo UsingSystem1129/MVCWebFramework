@@ -11,13 +11,14 @@ namespace COMMON
     {
         protected override void Seed(FrameworkDBContext context)
         {
-            var UserInfos = new List<UserInfo>()
-            {
-                new UserInfo { LoginName="admin", LoginPassword="111111"}
-            };
+            //var UserInfos = new List<UserInfo>()
+            //{
+            //    new UserInfo { LoginName="admin", LoginPassword="111111"}
+            //};
 
-            UserInfos.ForEach(m => context.UserInfos.Add(m));
-            context.SaveChanges();//通过context写入数据库
+            //UserInfos.ForEach(m => context.UserInfos.Add(m));
+            //context.UserInfos.Add(null);
+            //context.SaveChanges();//通过context写入数据库
         }
 
 

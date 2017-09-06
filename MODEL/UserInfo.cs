@@ -30,9 +30,10 @@ namespace MODEL
 			get { return realName; }
 			set { realName = value; }
 		}
-        [MaxLength(200)]
+       
         string loginName;
-		public string LoginName
+        [MaxLength(200)]
+        public string LoginName
 		{
 			get { return loginName; }
 			set { loginName = value; }
